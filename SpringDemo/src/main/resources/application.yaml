@@ -1,0 +1,16 @@
+server:
+  port: 8081
+
+person:
+  name: fugui
+  age: 3
+  happy: false
+  birth: 2020/06/26
+  maps: {k1: v1, k2: v2}
+  lists:
+    - code
+    - music
+    - girl
+  dog:
+    name: fugui
+    age: 3
