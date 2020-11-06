@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8080
 
 person:
   name: fugui
@@ -14,3 +14,15 @@ person:
   dog:
     name: fugui
     age: 3
+
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+#
+mybatis:
+  type-aliases-package: com.nkong.bean
+  mapper-locations: classpath:mybatis/mapper/*.xml

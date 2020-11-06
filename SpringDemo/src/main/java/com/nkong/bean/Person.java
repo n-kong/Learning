@@ -1,8 +1,11 @@
 package com.nkong.bean;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
+import org.springframework.validation.annotation.Validated;
 
+import javax.validation.constraints.Email;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -13,10 +16,22 @@ import java.util.Map;
  * @Version 1.0
  **/
 
-@Component
+/**
+ * @ConfigurationProperties作用
+ * 将配置文件中配置的每一个属性的值，映射到这个组件中
+ * 告诉SpringBoot将本类中的所有属性和配置文件中相关的配置进行绑定
+ * 参数 prefix = "person"：将配置文件中的person下面的所有属性一一对应
+ *
+ * 只有这个组件是融容器中的组件，才能使用容器提供的@ConfigurationProperties功能
+ *
+ * @PropertySource(value = "classpath:test.properties") 指定某配置文件
+ */
+@Validated  // 数据校验 JSR303校验
+@Component  // 注册bean
 @ConfigurationProperties(prefix = "person")
 public class Person {
 
+    //@Email(message = "邮箱错误")
     private String name;
     private Integer age;
     private Boolean happy;
