@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8081
 
 person:
   name: fugui
@@ -26,3 +26,6 @@ spring:
 mybatis:
   type-aliases-package: com.nkong.bean
   mapper-locations: classpath:mybatis/mapper/*.xml
+
+swagger:
+  enable: false
