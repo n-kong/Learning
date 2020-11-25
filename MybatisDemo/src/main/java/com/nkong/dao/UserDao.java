@@ -7,6 +7,8 @@ import java.util.Map;
 
 public interface UserDao {
 
+    List<User> getUserLike(String value);
+
     List<User> getUserList();
 
     User getUserById(int id);

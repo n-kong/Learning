@@ -7,8 +7,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="SpringDemo" />
+        <module name="MybatisDemo" />
+        <module name="MybatisPlusDemo" />
         <module name="LearnDemo" />
+        <module name="SpringDemo" />
       </profile>
     </annotationProcessing>
   </component>

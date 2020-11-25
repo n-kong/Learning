@@ -27,5 +27,9 @@ mybatis:
   type-aliases-package: com.nkong.bean
   mapper-locations: classpath:mybatis/mapper/*.xml
 
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
 swagger:
   enable: false

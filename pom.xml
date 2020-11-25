@@ -11,6 +11,7 @@
     <modules>
         <module>LearnDemo</module>
         <module>MybatisDemo</module>
+        <module>MybatisPlusDemo</module>
     </modules>
 
     <dependencies>

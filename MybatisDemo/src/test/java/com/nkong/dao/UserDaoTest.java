@@ -11,6 +11,19 @@ import java.util.Map;
 
 public class UserDaoTest {
 
+
+    @Test
+    public void testLike() {
+        SqlSession sqlSession = MybatisUtils.getSqlSession();
+        UserDao userDao = sqlSession.getMapper(UserDao.class);
+        List<User> userList = userDao.getUserLike("ha");
+        for (User user : userList) {
+            System.out.println(user);
+        }
+        sqlSession.close();
+
+    }
+
     @Test
     public void test() {
         SqlSession sqlSession = MybatisUtils.getSqlSession();
