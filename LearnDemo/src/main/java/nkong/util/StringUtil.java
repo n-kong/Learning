@@ -14,37 +14,47 @@ import java.util.regex.Pattern;
 public class StringUtil {
 
     public static void main(String[] args) {
+
+
         StringUtil util = new StringUtil();
 //        System.out.println(util.numFormat(11, 5));
 //        System.out.println(util.numAddOneFormat(20,"00000"));
 //        System.out.println(util.replaceStr("aa\rbb\rcc\n"));
-        System.out.println(getCharacterPosition("sddfg_dfg_sdc", "_", 2));
+//        System.out.println(getCharacterPosition("sddfg_dfg_sdc", "_", 2));
     }
+
+
+
+
+
 
     /**
      * 数字格式化，不足n位前面补0
      * 0:代表前面补充0, length:代表长度为4, d:代表参数为正数型
      * 例： 输入：11,5  输出：00011
-     * @param inNum 输入字符
+     *
+     * @param inNum  输入字符
      * @param length 补充后字符长度
      */
     public String numFormat(int inNum, int length) {
-        return String.format("%0"+length+"d", inNum);
+        return String.format("%0" + length + "d", inNum);
     }
 
     /**
      * 数字格式化， 输入字符加1， 然后格式化
      * 例： 输入：20,00000  输出：00021
-     * @param inNum 输入字符
+     *
+     * @param inNum      输入字符
      * @param STR_FORMAT 格式化字符
      */
-    public String numAddOneFormat(int inNum, String STR_FORMAT){
+    public String numAddOneFormat(int inNum, String STR_FORMAT) {
         DecimalFormat df = new DecimalFormat(STR_FORMAT);
         return df.format(++inNum);
     }
 
     /**
      * 替换\r \t \n字符
+     *
      * @param inStr 输入字符
      * @return 替换后的字符
      */
@@ -58,13 +68,13 @@ public class StringUtil {
     }
 
 
-    public static int getCharacterPosition(String instr, String chr, int num){
+    public static int getCharacterPosition(String instr, String chr, int num) {
         Pattern pattern = Pattern.compile(chr);
         Matcher findMatcher = pattern.matcher(instr);
         int number = 0;
-        while(findMatcher.find()) {
+        while (findMatcher.find()) {
             number++;
-            if(number == num){
+            if (number == num) {
                 break;
             }
         }

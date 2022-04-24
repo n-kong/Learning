@@ -29,6 +29,7 @@ public class ThreadPool01 {
     public void t() {
         // 1核心线程数  2最大线程数  3线程存活时间  4时间单位  5线程池队列大小
         ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(10, 20, 0L, TimeUnit.SECONDS, new LinkedBlockingQueue<>(10));
+
     }
 
 }

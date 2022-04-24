@@ -13,11 +13,11 @@
 
     <dependencies>
 
-        <dependency>
-            <groupId>com.nkong</groupId>
-            <artifactId>demo</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.nkong</groupId>-->
+<!--            <artifactId>demo</artifactId>-->
+<!--            <version>0.0.1-SNAPSHOT</version>-->
+<!--        </dependency>-->
 
     </dependencies>
 

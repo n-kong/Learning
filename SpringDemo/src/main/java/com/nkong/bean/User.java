@@ -1,30 +1,32 @@
 package com.nkong.bean;
 
-import com.baomidou.mybatisplus.annotation.FieldFill;
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import java.io.File;
-import java.util.Date;
-
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class User {
 
-    @TableId(type = IdType.ASSIGN_UUID)
-    public int id;
-    public String name;
-    public int age;
-    private String email;
+    private String name;
 
-    @TableField(fill = FieldFill.INSERT)
-    private Date create_time;
+    public User() {
 
-    @TableField(fill = FieldFill.INSERT_UPDATE)
-    private Date update_time;
+    }
+    public User(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+
+    public void show() {
+        System.out.println("name:" + name);
+    }
 }

@@ -20,6 +20,7 @@ public class ThreadCallable {
 
     private static String s = "";
 
+
     public static void main(String[] args) {
         final ExecutorService executor = Executors.newCachedThreadPool();
         final Future<String> submit = executor.submit(new TaskFuture());

@@ -11,5 +11,22 @@
 
     <artifactId>LearnDemo</artifactId>
 
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/com.moilioncircle/redis-replicator -->
+        <dependency>
+            <groupId>com.moilioncircle</groupId>
+            <artifactId>redis-replicator</artifactId>
+            <version>3.5.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/redis-replicator-3.5.0.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>3.4.1</version>
+        </dependency>
+
+    </dependencies>
 
 </project>
