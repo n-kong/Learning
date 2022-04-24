@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="user" class="com.nkong.bean.User" p:name="nkong"/>
+
+    <bean id="user2" class="com.nkong.bean.User" c:name="mack"/>
+
+    <bean id="address" class="com.nkong.bean.Address">
+        <property name="name" value="杭州"/>
+    </bean>
+    <bean id="student" class="com.nkong.bean.Student">
+        <!--第一种 普通值注入 value-->
+        <property name="name" value="nkong"/>
+        <!--第二种 Bean注入 res-->
+        <property name="address" ref="address"/>
+        <!--数组注入-->
+        <property name="books">
+            <array>
+                <value>红楼梦</value>
+                <value>西游记</value>
+            </array>
+        </property>
+        <!--List注入-->
+        <property name="hobbys">
+            <list>
+                <value>吃</value>
+                <value>睡</value>
+            </list>
+        </property>
+        <!--Map注入-->
+        <property name="card">
+            <map>
+                <entry key="身份证" value="410"/>
+                <entry key="手机号" value="410"/>
+            </map>
+        </property>
+        <!--Set注入-->
+        <property name="games">
+            <set>
+                <value>LOL</value>
+                <value>KPL</value>
+            </set>
+        </property>
+        <!--NULL注入-->
+        <property name="wife">
+            <null/>
+        </property>
+
+        <property name="info">
+            <props>
+                <prop key="id">123</prop>
+                <prop key="num">456</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>
